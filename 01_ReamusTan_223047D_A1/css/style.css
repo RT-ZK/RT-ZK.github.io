@@ -1,0 +1,271 @@
+* {padding: 0; margin: 0; box-sizing: border-box;}
+
+/*Background for all pages*/
+
+body{box-sizing: border-box; background-image: url(../images/IndexPg.jpg); background-size: cover; background-repeat: no-repeat; height: auto;}
+
+/*Navigation Bar*/
+
+ul.navbar {list-style-type: none; overflow: hidden; margin: 0; padding: 0; background-color:darkorchid;}
+.navbar li {float:left;}
+.navbar .active {background-color: #e54c9c;}
+.navbar li a, .dropbtn {display: inline-block; color: whitesmoke; text-align: center; padding: 16px 35px; text-decoration: none; 
+    font-size: 25px; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;}
+.navbar li a:hover, .droplist:hover .dropbtn {background-color:mediumorchid;}
+.navbar li a.active:hover {background-color: #e54c9c;}
+
+/*Nav Bar Dropdown*/
+
+.navbar li.droplist {display: inline-block;}
+.navbar .droplistcontent {display:none; position: absolute; background-color:orchid; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1;}
+.navbar .droplistcontent a {display: block; color: whitesmoke; text-align: left; padding: 14px 22px; text-decoration: none; 
+    font-size: 20px; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;}
+.navbar .droplistcontent a:hover {background-color:plum}
+.navbar .droplist:hover .droplistcontent {display: block;}
+
+/*Index Page*/
+
+/*Index Main Page*/
+main.IdxPg {display: grid; grid-template-columns: repeat(4,25%); grid-template-rows: 102px auto 102px;}
+/*Index Header*/
+#IdxHeader {text-align: center; font-size: 2.5vw; text-decoration: underline double 4px; color:aliceblue;
+    grid-column: 2/4; grid-row: 1/2; font-family:Verdana, Geneva, Tahoma, sans-serif; padding-top: 10px;}
+/*Picture of me, placed in <figure>*/
+.IdxPg figure{grid-column: 3/5; grid-row: 2/3; font-family:Verdana, Geneva, Tahoma, sans-serif; padding-top: 20px; padding-left: 50px; text-align: center;}
+.IdxPg figure img{width:43vw; height:calc(43vw/(576.81/544))}
+/*Description of me, in <section>*/
+.IdxPg section{grid-column: 1/3; grid-row: 2/4; 
+    display: grid; grid-template-rows: repeat(18,auto);
+    font-family:Verdana, Geneva, Tahoma, sans-serif; padding-top: 20px; padding-left: 10px; font-size: 1.3vw;}
+/*Title of Desc <section>*/
+.IdxPg section header{grid-row: 1/2; font-family:Verdana, Geneva, Tahoma, sans-serif; 
+    text-align:center; text-decoration: none; color:aliceblue; padding-bottom: 10px;}
+/*Main Content of Desc <section>*/
+.IdxPg section p{grid-row: 2/3; font-family:Verdana, Geneva, Tahoma, sans-serif;; 
+    text-align:justify; text-decoration: none; padding-left: 20px; padding-right: 20px; color:aliceblue;}
+/*End of Desc <section>, with a embedded map in <iframe>*/
+.IdxPg section footer{grid-row: 3/10; padding-top: 10px;}
+.IdxPg section footer iframe{width:50vw; height:auto}
+
+/*Education*/
+/*Education Main Page*/
+main.EdPg {display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: auto auto;}
+/*Education Page Header*/
+#EdHeader {text-align: center; color:aliceblue;
+    grid-column: 1/4; grid-row: 1/2; font-size: 2.0vw; font-family:'Times New Roman', Times, serif; 
+    padding-top: 10px; text-decoration: underline 3px;}
+.EdPg .EdSchSec {grid-row: 2/3;
+    display:grid; grid-template-rows: 60px 261px auto;}
+/*Each School section takes a third of the screen.*/
+#Pri{
+    grid-column: 1/2;}
+#Sec{
+    grid-column: 2/3;}
+#Ter{
+    grid-column: 3/4;}
+.EdSchSec header {text-align: center; font-size: 2.6vw; color:aliceblue; grid-row: 1/2;}
+.EdSchSec figure {grid-row: 2/3; border-left: 1px solid whitesmoke; border-right: 1px solid whitesmoke;}
+.EdSchSec figure img{width:100%; height: 100%;}
+.EdSchSec p {grid-row: 3/4; text-align: justify; font-size: 1.5vw; padding-top: 20px; padding-left: 10px; padding-right: 10px; padding-bottom: 5px; color:aliceblue; 
+    border-bottom: 2px solid whitesmoke; border-left: 1px solid whitesmoke; border-right: 1px solid whitesmoke;}
+
+/*Hobbies*/
+/*Hobbies Main Page*/
+main.HbPg {display: flex; width: 100%; flex-wrap: wrap; height: auto;}
+/*Hobbies Main Page Header*/
+#HbHeader {text-align: center; color:aliceblue;
+    flex-basis: 100%; font-size: 2.7vw; font-family:'Times New Roman', Times, serif; 
+    padding-top: 10px;}
+/*Hobbies - Video Games, TV and Movies, DnD*/
+.HbPg .HbSec{
+    flex-basis: 100%;
+    display: flex; width: 100%; flex-wrap: wrap; padding-top: 20px; padding-bottom: 20px;}
+/*Hobbies - Section Header*/
+.HbSec header{
+    flex-basis: 100%;
+    font-size: 5.0vw; text-align: center;}
+/*VG Section*/
+#VG{
+    color:gold; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif}
+/*VG Desc*/
+.HbSec .VGSec{
+    flex-basis: 100%; font-size: 2.7vw; font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; text-align: center; 
+    padding-top: 25px; padding-left: 10px; padding-right: 10px; color:darkorange}
+/*VG Image Box*/
+.HbSec .VGFig{
+    flex-basis: 50%; text-align: center; padding-top: 5px;}
+.VGFig img{
+    border: 2px solid aliceblue; border-radius: 15px;}
+/*VG Images (Some are originally different sizes)*/
+#OW2Pic img, #ValPic img{
+    max-width: 95%; height: auto;}
+#RDR2Pic img, #CP2077Pic img{
+    max-width: 95%; height:calc(47.5vw/(655/374.06))}
+/*TVM Section*/
+#TVM{
+    color:greenyellow; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif}
+/*TVM Desc*/
+.HbSec .TVMSec{
+    flex-basis: 100%; font-size: 3.3vw; font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; text-align: center;
+    padding-top: 25px; padding-left: 10px; padding-right: 10px; color:chartreuse;}
+/*TVM Genre List (Takes up 1/3 of screen in middle)*/
+.HbSec #TVMGenreListDesc{
+    flex-basis:100%; font-size: 3.5vw; font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; text-align: center; 
+    padding-top: 10px; padding-left: 10px; padding-right: 10px; color:chartreuse; height: auto;}
+.HbSec #TVMGenreList{
+    font-size: 2.5vw; font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; text-align: left; 
+    padding-top: 10px; padding-left: 45vw; padding-right: 10px; color:chartreuse;}
+/*TV Shows List (Takes up 1/2 of screen, LHS)*/
+.HbSec #TVListDesc{
+    flex-basis: 50%; font-size: 3.1vw; font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; text-align: left; 
+    padding-left: 10vw; padding-right: 10px; color:chartreuse; height: auto;}
+.HbSec #TVList{
+    font-size: 2.5vw; font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; text-align: left; 
+    padding-top: 10px; padding-left: 5vw; padding-right: 10px; color:chartreuse;}
+.HbSec .TVMFig{
+    flex-basis: 50%; text-align: center; padding-top: 10px;}
+.TVMFig img{
+    border: 2px solid aliceblue; border-radius: 25px;}
+/*Movies List (Takes up 1/2 of screen, RHS)*/
+.HbSec #MListDesc{
+    flex-basis: 50%; font-size: 3.1vw; font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; text-align: left; 
+    padding-top: 10px;padding-left: 10vw; padding-right: 10px; color:chartreuse; height: auto;}
+.HbSec #MList{
+    font-size: 2.5vw; font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; text-align: left; 
+    padding-top: 10px; padding-left: 5vw; padding-right: 10px; color:chartreuse;}
+/*DnD Section*/
+#DND{
+    color:lightblue; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif}
+.HbSec .DNDSec{
+    flex-basis: 100%; font-size: 3.3vw; font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; text-align: center; 
+    padding-top: 25px; padding-left: 5vw; padding-right: 5vw; color:lightseagreen}
+.HbSec .D20Intro{
+    flex-basis: 100%; font-size: 3.3vw; font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; text-align:center; 
+    padding-top: 25px; padding-left: 10vw; padding-right: 10vw; color:lightseagreen}
+/*DnD Image Gallery*/
+.DNDGallery {
+    padding: 10px 20px; width: 50%;}
+.DNDImgGal {
+    border: 2px solid aliceblue;} 
+.DNDImgGal img {
+    width: 100%; height:calc(50vw/(678.4/381.6));}
+.DNDImgDesc{
+    padding: 15px; text-align: center; font-size: 2.0vw; font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; color:lightseagreen}
+/*Hobby Media*/
+#CMPic img, #BLPic img, #ATLAPic img, #NBDYPic img, #CONSTPic img, #OC11Pic img, #FHPic img, #D20Pic img{
+    max-width: 95%; height:calc(47.5vw/(655/374.06));}
+.HbSec .YTPlayer{
+    flex-basis: 50%; text-align: center; padding-top: 10px;}
+.YTPlayer iframe{
+    width: 47.5vw; height:calc(47.5vw/(560/315)); border: 2px solid aliceblue; border-radius: 20px;}
+
+@media screen and (max-width:800px) {
+    /*Idx Pg, content structured to go downwards rather than side-by-side*/
+    main.IdxPg {
+        display: grid; grid-template-columns: repeat(4,25%); grid-template-rows: auto repeat(2,auto) 102px;}
+    #IdxHeader{
+        font-size: 3.0vw;}
+    .IdxPg figure{
+        grid-column: 1/5; grid-row: 2/3; padding-left: 0px; padding-top: 10px;}
+    .IdxPg figure img{
+        width:80vw; height:calc(80vw/(576.81/544))}
+    .IdxPg section{
+        grid-column: 1/5; grid-row: 3/5; font-size: medium; padding-right: 10px; padding-top: 0px;  font-size: 2.5vw;}
+    .IdxPg section p{
+        padding-bottom: 10px;}
+    .IdxPg section footer iframe{width:99vw; height:auto; padding-right: 10px;}
+    /*Ed Pg, each School section is organized vertically down instead of horizontally*/
+    main.EdPg{
+        display: flex; width: 100%; flex-wrap: wrap; box-sizing: border-box;}
+    #EdHeader{
+        height: auto; flex: 100%; font-size: 3.2vw;}
+    .EdPg .EdSchSec{
+        display: flex; width: 100%; flex-wrap: wrap; box-sizing: border-box;}
+    .EdSchSec header{
+        height: auto; flex: 100%; padding-top: 10px;  font-size: 4.0vw;}
+    .EdSchSec figure{
+        padding-top: 20px; border: none;}
+    .EdSchSec figure img{width:100vw; height: calc(100vw/(401.33/261));}
+    .EdSchSec p{
+        padding-top: 0px;padding-bottom: 1vw; flex: 100%; font-size: 3.4vw;}
+    /*Hobbies Images now formatted vertically, font size increased, lists centered in screen*/
+    .HbSec .VGFig{
+        flex-basis: 100%; text-align: center; padding-top: 5px;}
+    .VGFig img{
+        border: 2px solid aliceblue; border-radius: 15px;}
+    .HbSec header{
+        font-size: 5.9vw;}
+    .HbSec .VGSec{
+        font-size: 3.6vw;}
+    .HbSec .TVMSec{
+        font-size: 4.2vw;}
+    .HbSec #TVMGenreListDesc{
+        flex-basis: 100%; text-align: center; padding-left: 0px; font-size: 4.0vw;}
+    .HbSec #TVMGenreList{
+        padding-left: 40vw; font-size: 3.4vw;}
+    .HbSec #TVListDesc{
+        flex-basis: 100%; text-align: center; padding-left: 0px; font-size: 4.0vw;}
+    .HbSec #TVList{
+        padding-left: 40vw; font-size: 3.4vw;}
+    .HbSec #MListDesc{
+        flex-basis: 100%; text-align: center; padding-left: 0px; font-size: 4.0vw;}
+    .HbSec #MList{
+        padding-left: 40vw; font-size: 3.4vw;}
+    /*VG Images (Some are originally different sizes)*/
+    #OW2Pic img, #ValPic img{
+        max-width: 95%; height: auto;}
+    #RDR2Pic img, #CP2077Pic img{
+        max-width: 95%; height:calc(95vw/(655/374.06))}
+    .HbSec .TVMFig{
+        flex-basis: 100%; text-align: center; padding-top: 10px;}
+    .TVMFig img{
+        border: 2px solid aliceblue; border-radius: 25px;}
+    .DNDGallery {
+        padding: 10px 20px; width: 100%;}
+    .DNDImgGal {
+        border: 2px solid aliceblue;} 
+    .DNDImgGal img {
+        width: 100%; height:calc(100vw/(678.4/381.6));}
+    .DNDImgDesc{
+        font-size: 3.0vw;}
+    #CMPic img, #BLPic img, #ATLAPic img, #NBDYPic img, #CONSTPic img, #OC11Pic img, #FHPic img, #D20Pic img{
+        max-width: 95%; height:calc(95vw/(655/374.06));}
+    .HbSec .YTPlayer{
+        flex-basis: 100%; text-align: center; padding-top: 10px;}
+    .YTPlayer iframe{
+        width: 95%; height:calc(95vw/(560/315)); border: 2px solid aliceblue; border-radius: 20px;}
+}
+
+@media screen and (max-width:540px) {
+    /*Idx Pg, content structured to go downwards rather than side-by-side*/
+    #IdxHeader{
+        font-size: 23px;}
+    .IdxPg section{
+        font-size: 3.0vw;}
+    /*Ed Pg, each School section is organized vertically down instead of horizontally*/
+    #EdHeader{
+        font-size: 4.0vw;}
+    .EdSchSec header{
+        font-size: 5.0vw;}
+    .EdSchSec p{
+        font-size: 4.4vw; padding-top: 5px;}
+    /*Hobbies Images now formatted vertically, font size increased*/
+    #HbHeader{
+        font-size: 3.6vw;}
+    .HbSec header{
+        font-size: 6.8vw;}
+    .HbSec .VGSec{
+        font-size: 4.5vw;}
+    .HbSec .TVMSec{
+        font-size: 5.1vw;}
+    .HbSec #TVMGenreListDesc{
+        font-size: 4.9vw;}
+    .HbSec #TVMGenreList{
+        font-size: 4.3vw;}
+    .HbSec #TVListDesc{
+        font-size: 4.9vw;}
+    .HbSec #TVList{
+        font-size: 4.3vw;}
+    .HbSec #MListDesc{
+        font-size: 4.9vw;}
+}
