@@ -1,0 +1,366 @@
+* {padding: 0; margin: 0; box-sizing: border-box;}
+
+.Blank {
+    display: none;
+}
+
+/*Navigation Bar*/
+ul.navbar {
+    list-style-type: none; 
+    overflow: hidden; 
+    margin: 0; 
+    padding: 0; 
+    background-color:black;
+}
+.navbar li {
+    float:left;
+}
+.navbar li a {
+    display: inline-block; 
+    color: yellow; 
+    text-align: center; 
+    padding: 16px 35px; 
+    text-decoration: none; 
+    font-size: 25px; 
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+}
+.navbar li a:hover {
+    background-color:darkslategray;
+}
+
+.Page {
+    width:100vw;
+    height:100vh;
+    border:1px solid red}
+
+/*Index Page*/
+#IdxPage {
+
+}
+
+.IndexPage {
+    width:100vw;
+    height:100vh;
+    display: grid; 
+    grid-template-rows: repeat(8, 12.5vh);
+}
+
+#IdxHeader {
+    text-align: center; 
+    font-size: 2.5vw; 
+    color:sandybrown;
+    grid-column: 1/4; 
+    grid-row: 1/2; 
+    font-family:'Courier New', Courier, monospace;
+    background-color: black;
+}
+
+#IdxContent {
+    grid-column: 1/4; 
+    grid-row: 2/8; 
+    background:100%;
+    background-image: url(../images/IndexPg1.png); 
+    background-size:cover; 
+    background-repeat: no-repeat;
+    object-fit: contain;
+
+    display: flex; 
+    width: 100%; 
+    flex-wrap: wrap; 
+    height: auto;
+}
+
+.IdxDisplay {
+    flex-basis: calc(100%/3);
+    padding-top: 15vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-bottom: 8vh;
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+}
+
+.IdxTitle{
+    grid-row: 1/2;
+    
+    text-align: center;
+    font-size: 2.5vw;
+    color:yellow;
+    background-color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+}
+
+.IdxIcon{
+    grid-row: 2/5;
+    border: 1px solid deepskyblue;
+    opacity:calc(0);
+}
+
+#IconHist{
+    background:100%;
+    background-image: url(../images/TTRPG.jpg); 
+    background-size:cover; 
+    background-repeat: no-repeat;
+    object-fit: contain;
+}
+
+#IconMedia{
+    background:100%;
+    background-image: url(../images/Media.jpg); 
+    background-size:cover; 
+    background-repeat: no-repeat;
+    object-fit: contain;
+}
+
+#IconGame{
+    background:100%;
+    background-image: url(../images/IndexPg1.png); 
+    background-size:cover; 
+    background-repeat: no-repeat;
+    object-fit: contain;
+}
+
+.IdxDesc{
+    grid-row: 5/6;
+    background-color: darkslategray;
+    padding-top:1.5vw;
+    text-align: center;
+    font-size: 1.5vw;
+    color:yellow;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    opacity:calc(0);
+    
+}
+
+#IdxFooter {
+    grid-column: 1/4; 
+    grid-row: 8/9; 
+    background-color: black;
+}
+
+/*History*/
+#HistoryContent{
+    display: grid;
+    grid-template-columns: 30vw 40vw 30vw;
+    grid-template-rows: 10vh 15vh 50vh 25vh;
+}
+
+#HistHeader{
+    grid-column: 1/4;
+    grid-row: 1/2;
+    text-align: center;
+    font-size: 1.5vw;
+    color:yellow;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    background-color: black;
+    border:5px solid aqua;
+}
+
+#HistSum {
+    grid-column: 1/4;
+    grid-row: 2/3;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-top: 2.2vh;
+    text-align: center;
+    font-size: 1.5vw;
+    color:yellow;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    background-color: black;
+}
+
+#HistIcons {
+    grid-column: 1/4;
+    grid-row: 3/4;
+    display: flex; 
+    width: 100%; 
+    flex-wrap: wrap; 
+    height: auto;
+}
+
+.EditionIcons {
+    padding-top: 1vh;
+    flex-basis: 50%;
+    text-align: center;
+    background-color: darkcyan;
+}
+
+.EditionIcons img {
+    border: 7px solid gold; 
+    border-radius: 15px;
+    max-width: 95%; 
+    height: auto;
+}
+
+#HistDesc{
+    flex-basis: 100%;
+    text-align: center;
+    font-size: 1.5vw;
+    color:yellow;
+    font-family:'Courier New', Courier, monospace;
+    font-style: italic;
+    background-color: black;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+/*Media*/
+
+#MediaContent{
+    display: grid;
+    grid-template-rows: 10vh 15vh;
+}
+
+#MediaHeader{
+    grid-column: 1/4;
+    grid-row: 1/2;
+    text-align: center;
+    font-size: 1.5vw;
+    color:chartreuse;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    background-color: black;
+    border:5px solid aqua;
+}
+
+#MediaSum{
+    grid-column: 1/4;
+    grid-row: 2/3;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-top: 2.2vh;
+    text-align: center;
+    font-size: 1.5vw;
+    color:chartreuse;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    background-color: black;
+}
+
+#MediaIcons {
+    grid-column: 1/4;
+    grid-row: 3/4;
+    display: flex; 
+    width: 100%; 
+    flex-wrap: wrap; 
+    height: auto;
+}
+
+.AdaptationIcons {
+    padding-top: 1vh;
+    flex-basis: 50%;
+    text-align: center;
+    background-color: darkcyan;
+}
+
+.AdaptationIcons img {
+    border: 7px solid gold; 
+    border-radius: 15px;
+    max-width: 95%; 
+    height: auto;
+}
+
+.YTPlayer{
+    flex-basis: 50%; text-align: center; padding-top: 10px;}
+.YTPlayer iframe{
+    width: 47.5vw; height:calc(47.5vw/(560/315)); border: 2px solid aliceblue; border-radius: 20px;}
+
+/*Game*/
+
+#GameContent{
+    display: grid;
+    grid-template-rows: 10vh 15vh;
+}
+
+#GameHeader{
+    grid-column: 1/4;
+    grid-row: 1/2;
+    text-align: center;
+    font-size: 1.5vw;
+    color:crimson;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    background-color: black;
+    border:5px solid aqua;
+}
+
+#GameSum{
+    grid-column: 1/4;
+    grid-row: 2/3;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-top: 2.2vh;
+    text-align: center;
+    font-size: 1.5vw;
+    color:crimson;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    background-color: black;
+}
+
+#GameComponents {
+    grid-column: 1/4;
+    grid-row: 3/4;
+    display: flex; 
+    width: 100%; 
+    flex-wrap: wrap; 
+    height: auto;
+}
+
+.GameComp {
+    padding-top: 1vh;
+    flex-basis: 50%;
+    text-align: center;
+    background-color:darkslategray;
+}
+
+#CC{
+    flex-basis: 100%;
+}
+
+.GameComp img {
+    border-radius: 15px;
+    max-width: 95%; 
+    height: auto;
+}
+
+.GameComp footer{
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-top: 2.2vh;
+    text-align: left;
+    font-size: 1.5vw;
+    color:cornsilk;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    border: 3px solid black; 
+    border-radius: 3px;
+}
+
+@media screen and (max-width:800px) {
+    .EditionIcons{
+        flex-basis: 100%;
+    }
+    .AdaptationIcons{
+        flex-basis: 100%;
+    }
+    .GameComp{
+        flex-basis: 100%;
+    }
+
+    .navbar li a {
+        display: inline-block; 
+        color: yellow; 
+        text-align: left; 
+        padding: 16px 5px; 
+        text-decoration: none; 
+        font-size: 2.25vw; 
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+    }
+}
